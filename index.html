@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script type="text/javascript" src="assets/javascript/app.js" ></script>
+</head>
+<body>
+
+             <nav class="row navbar navbar-dark" id="topNavbar">
+                <div class="col-md-2"></div>
+                <div class="col-md-8" id="navText">Scheduler</div>
+                <div class="col-md-2"></div>
+              </nav>
+
+              <div class="row" id="spaceBelow"></div>
+
+              
+              <div class="row" id="middleTable">
+
+
+                    <table class="table table-hover">
+                            <thead class="headBorder">
+                                <tr class="col-md-12 tableHeading">
+                                <th scope="row">Current Train/Bus Schedule</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        <table class="table table-hover tableDiv">
+                                        <tbody>
+                                                <tr class="table-success tableDescription">
+                                                <th scope="row">Name of Train/Bus</th>
+                                                <td>Destination</td>
+                                                <td>Frequency (Min)</td>
+                                                <td>Next Arrival</td>
+                                                <td>Minutes Away</td>
+                                                </tr>
+                                                <tr class="table-success">
+                                                <th scope="row">Oriantal Express</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+
+                                                </tr>
+                                    </tbody>
+                                    
+                        </table>
+            </div>
+
+            <div class="row" id="spaceBelow"></div>
+
+            <div class="row" id="middleTable">
+
+
+                    <table class="table table-hover">
+                            <thead class="headBorder">
+                                <tr class="col-md-12 tableHeading">
+                                <th scope="row">Add Train/Bus Schedule</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        <table class="table table-hover tableDiv">
+                                        <tbody>
+                                                <tr class="table-info tableDescription">
+                                                <th scope="row">
+                                                        <div class="form-group row">
+                                                                <label for="train-name">Train/Bus Name</label>
+                                                                <input class="form-control" id="train-name" type="text">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                                <label for="train-name">Destination</label>
+                                                                <input class="form-control" id="train-name" type="text">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                                <label for="train-name">First Train/Bus Time (HH:MM - military time)</label>
+                                                                <input class="form-control" id="train-name" type="text">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                                <label for="train-name">Frequency (min) (If it comes every 5 min then write 5 in the box below)</label>
+                                                                <input class="form-control" id="frequency-min" type="text">
+                                                        </div>
+                                                        <button class="form-group btn btn-primary" id="submit-info" type="submit">Submit</button>
+
+                                                </th>
+                                                
+                                                </tr>
+                                            
+                                    </tbody>
+                                    
+                        </table>
+            </div>
+        </div>
+
+
+</body>
+</html>

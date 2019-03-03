@@ -1,0 +1,68 @@
+html, body {
+    background: url(../images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.96;
+    
+}
+
+#topNavbar {
+    height: 200px;
+    text-align: center;
+    margin-left:100px;
+    margin-right:100px;
+    background-color: rgb(160, 115, 73);
+}
+
+#navText {
+    color: #fff;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+    font-size: 80px;
+
+}
+
+#spaceBelow
+{
+    height:20px;
+}
+
+.table {
+    border: 2px solid rgb(58, 112, 228);
+}
+
+#middleTable {
+    margin-left:100px;
+    margin-right:100px;
+}
+
+.headBorder {
+    background-color: rgb(58, 112, 228);
+    color: #fff;
+    border: 2px solid rgb(58, 112, 228);
+    font-weight: bold;
+   
+}
+
+.tableHeading{
+    width:80vw;
+}
+
+.tableDescription{
+    font-weight: bold;
+}
+
+.tableDiv {
+    margin-top: -20px;
+}
+
+.form-group {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+
