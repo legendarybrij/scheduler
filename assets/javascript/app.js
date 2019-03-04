@@ -14,35 +14,36 @@
 
   console.log(database);
   var name = "";
+  
+
+$(document).ready(function(){ 
 
 $("#submit-info").on("click", function(event){
 
   event.preventDefault();
   name = $("#train-name").val().trim();
-  console.log(name);
+  //console.log(name);
 
   database.ref().push({
-    name: name  
+    name: name
   });
-
+  $("#train-name").val("");
 });
 
 
-/*database.ref().on("child_added", function(snapshot) {
+database.ref().on("child_added", function(snapshot) {
     // storing the snapshot.val() in a variable for convenience
     var sv = snapshot.val();
-
    
     console.log(sv.name);
    
-
     // Handle the errors
   }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
-  });*/
+  });
+  
 
+  
 
-
-
-
+});
 
