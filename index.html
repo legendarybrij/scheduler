@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <script type="text/javascript" src="assets/javascript/app.js" ></script>
@@ -75,23 +76,25 @@
                                         <tbody>
                                                 <tr class="table-info tableDescription">
                                                 <th scope="row">
+                                                        <form role="form">
                                                         <div class="form-group row">
                                                                 <label for="train-name">Train/Bus Name</label>
                                                                 <input class="form-control" id="train-name" type="text">
                                                         </div>
                                                         <div class="form-group row">
                                                                 <label for="train-name">Destination</label>
-                                                                <input class="form-control" id="train-name" type="text">
+                                                                <input class="form-control" id="destination-name" type="text">
                                                         </div>
                                                         <div class="form-group row">
                                                                 <label for="train-name">First Train/Bus Time (HH:MM - military time)</label>
-                                                                <input class="form-control" id="train-name" type="text">
+                                                                <input class="form-control" id="first-time" type="number">
                                                         </div>
                                                         <div class="form-group row">
                                                                 <label for="train-name">Frequency (min) (If it comes every 5 min then write 5 in the box below)</label>
-                                                                <input class="form-control" id="frequency-min" type="text">
+                                                                <input class="form-control" id="frequency-min" type="number">
                                                         </div>
-                                                        <button class="form-group btn btn-primary" id="submit-info" type="submit">Submit</button>
+                                                        <button class="btn btn-primary" id="submit-info" type="submit">Submit</button>
+                                                        </form>
 
                                                 </th>
                                                 
