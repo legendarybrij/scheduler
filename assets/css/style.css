@@ -63,7 +63,12 @@ html, body {
     margin-right: 10px;
 }
 
+.hide {
+    color: rgb(58, 112, 228);
+}
 
-
+td, th{
+    text-align: center;
+}
 
 
