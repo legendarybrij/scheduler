@@ -47,7 +47,7 @@ html, body {
 }
 
 .tableHeading{
-    width:80vw;
+    width:857px auto;
 }
 
 .tableDescription{
@@ -64,11 +64,17 @@ html, body {
 }
 
 .hide {
-    color: rgb(58, 112, 228);
+    min-width: 654px;
 }
 
 td, th{
     text-align: center;
 }
+
+.updateEdit:hover, .removeData:hover {
+    cursor: pointer;
+}
+
+
 
 
