@@ -14,7 +14,7 @@
 
   //var connectionsRef = database.ref("/schedule");
 
-  console.log(database);
+  //console.log(database);
   var nameT = "";
   var count = 0;
   var data=[];
@@ -45,7 +45,7 @@ $("#submit-info").on("click", function(event){
     
  var tMinutesTillTrain = minAway(firstT,frequencyT);
  var nextA = nextArrival(tMinutesTillTrain);
-    console.log(tMinutesTillTrain+" "+nextA);
+    //console.log(tMinutesTillTrain+" "+nextA);
 
   //console.log(name);
 
@@ -87,7 +87,7 @@ database.ref("/schedule").on("child_added", function(snapshot) {
     var remove = $("<td>");
 
 
-    console.log("NAME: " +sv.name + " Destination: " +sv.destination +" First-time: "+ sv.firstTime+ " Frequency: "+sv.frequencyTime);
+    //console.log("NAME: " +sv.name + " Destination: " +sv.destination +" First-time: "+ sv.firstTime+ " Frequency: "+sv.frequencyTime);
     
     $(".tableInsert").append(newRow);
     newRow.append(newCol1);
@@ -129,7 +129,7 @@ database.ref("/schedule").on("child_added", function(snapshot) {
     remove.attr("id","removeData"+count);
     database.ref("/id").on("child_added", function(snapshot) {
       var id = snapshot.val();
-      console.log("Count = "+count+" ID= "+id.deleteId[count]);
+      //console.log("Count = "+count+" ID= "+id.deleteId[count]);
     $("#removeData"+count).attr("data-id",id.deleteId[count]);
     $("#updateEdit"+count).attr("data-id",id.deleteId[count]);
     });
@@ -139,7 +139,7 @@ database.ref("/schedule").on("child_added", function(snapshot) {
 
     // Handle the errors
   }, function(errorObject) {
-    console.log("Errors handled: " + errorObject.code);
+    //console.log("Errors handled: " + errorObject.code);
   });
 
 
@@ -157,7 +157,7 @@ database.ref("/schedule").on("child_added", function(snapshot) {
   });
 
 
-  $(document).on("click", ".updateEdit", function(event){
+  /*$(document).on("click", ".updateEdit", function(event){
     console.log(event);
     var target = event.currentTarget.classList[0];
     console.log("target = "+"#"+target);
@@ -189,7 +189,7 @@ database.ref("/schedule").on("child_added", function(snapshot) {
 
 
 
-  });
+  });*/
 
 
 
@@ -200,23 +200,23 @@ database.ref("/schedule").on("child_added", function(snapshot) {
 function minAway(firstT,frequencyT) {
 // First Time (pushed back 1 year to make sure it comes before current time)
 var firstTimeConverted = moment(firstT, "HH:mm").subtract(1, "years");
-console.log(firstTimeConverted);
+//console.log(firstTimeConverted);
 
 // Current Time
 var currentTime = moment();
-console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+////console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
 
 // Difference between the times
 var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-console.log("DIFFERENCE IN TIME: " + diffTime);
+//console.log("DIFFERENCE IN TIME: " + diffTime);
 
 // Time apart (remainder)
 var tRemainder = diffTime % frequencyT;
-console.log(tRemainder);
+//console.log(tRemainder);
 
 // Minute Until Train
 var tMinutesTillTrain = frequencyT - tRemainder;
-console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+//console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
 return tMinutesTillTrain;
 
@@ -225,7 +225,7 @@ return tMinutesTillTrain;
 function nextArrival(tMinutesTillTrain) {
 // Next Train
 var nextT = moment().add(tMinutesTillTrain, "minutes");
-console.log("ARRIVAL TIME: " + moment(nextT).format("hh:mm"));
+//console.log("ARRIVAL TIME: " + moment(nextT).format("hh:mm"));
 var nextA = moment(nextT).format("hh:mm");
 return nextA;
 }
